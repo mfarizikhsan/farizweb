@@ -18,3 +18,23 @@ section {
 #gallery .row > * {
   padding: 0;
 }
+
+#contacts .row {
+  margin-top: 20px;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #dddddd;
+}
+
+::-webkit-scrollbar-thumb {
+  background: lightskyblue;
+}
+
+#gallery {
+  background-color: #e2edff;
+}
