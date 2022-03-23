@@ -27,14 +27,102 @@ section {
   width: 15px;
 }
 
-::-webkit-scrollbar-track {
-  background: #dddddd;
-}
-
 ::-webkit-scrollbar-thumb {
   background: lightskyblue;
+  border-radius: 10000px;
 }
 
 #gallery {
   background-color: #ffff;
+}
+
+/* My Render section */
+.render-box {
+  position: relative;
+  background-color: #0d6efd;
+  border-radius: 10px;
+  height: 500px;
+  transform-style: preserve-3d;
+}
+
+.render-box::before {
+  content: "MY";
+  position: absolute;
+  color: #ffff;
+  font-size: 6em;
+  font-weight: bold;
+  font-style: italic;
+  top: 30px;
+  left: -100px;
+  opacity: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: 0.5s;
+}
+
+.render-box:hover::before {
+  opacity: 0.2;
+}
+
+.render-box::after {
+  content: "RENDER";
+  position: absolute;
+  color: #ffff;
+  font-size: 4em;
+  font-weight: bold;
+  font-style: italic;
+  top: 350px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.render-box:hover::after {
+  opacity: 0.2;
+}
+
+.render-name {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #ffff;
+  text-align: center;
+  font-size: 2em;
+  opacity: 0;
+  transform: translate3d(0, 0, 50px);
+  transition: 0.5s;
+}
+
+.render-box:hover .render-name {
+  top: 20px;
+  opacity: 1;
+}
+
+.render-detail-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 100px);
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+.render-box:hover .render-detail-button {
+  opacity: 1;
+  bottom: 20px;
+}
+
+.render-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -52%, 100px);
+  max-width: 450px;
+  transition: 0.5s;
+}
+
+.render-box:hover .render-img {
+  transform: translate3d(-50%, -52%, 100px) rotate(-5deg) scale(1.2);
 }

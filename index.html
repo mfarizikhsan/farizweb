@@ -142,6 +142,39 @@
           </div>
         </div>
       </div>
+      <section id="my-Render">
+        <div class="container">
+          <div class="row text-center mb-3">
+            <div class="col">
+              <h2>My Renders</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="render-box">
+                <h4 class="render-name">Rzeax Red Edition</h4>
+                <img class="render-img" src="img/Render/1.png" alt="Red Devil" />
+                <a href="#" class="btn btn-light render-detail-button">Show Details</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="render-box">
+                <h4 class="render-name">ZirafHD First Skin</h4>
+                <img class="render-img" src="img/Render/2.png" alt="Twilight Purple" />
+                <a href="#" class="btn btn-light render-detail-button">Show Details</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="render-box">
+                <h4 class="render-name">Fqriz Purple Edition</h4>
+                <img class="render-img" src="img/Render/3.png" alt="LightPurple" />
+                <a href="#" class="btn btn-light render-detail-button">Show Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -331,6 +364,15 @@
             console.log("Success!", response);
           })
           .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+
+    <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".render-box"), {
+        max: 35,
+        speed: 400,
+        glare: true,
       });
     </script>
   </body>
